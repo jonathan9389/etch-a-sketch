@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 16px;
+}
+
+header {
+    display: flex;
+    width: 640px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.item {
+    aspect-ratio: 1 / 1;
+    border: 0.1px solid #e0e0e0;
+}
+
+.prompt-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffff;
+    text-decoration: none;
+
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2), 
+                0 2px 4px -1px rgba(79, 70, 229, 0.1);
+
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                filter 0.2s ease;
+}          
+
+/* THE HOVER STATE */
+.prompt-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(79, 70, 229, 0.12);
+    filter: brightness(1.05);
+}
+
+/* THE ACTIVE STATE (When Clicked) */
+.prompt-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.09);
+    filter: none;
+}
